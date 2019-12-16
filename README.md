@@ -1,3 +1,7 @@
+# React Context Music Player
+
+Simple music player to see the benefits of React Hooks and Context.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

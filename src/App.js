@@ -1,25 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import TrackList from "./TrackList";
+import PlayerControls from './PlayerControls';
+import { MusicPlayerProvider } from "./MusicPlayerContext";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MusicPlayerProvider>
+      <div className="container" style={{ minHeight: 'calc(100vh - 70px)'}}>
+        <TrackList />
+        <PlayerControls />
+      </div>
+      <footer style={{ height: '50px', textAlign: 'center' }}> Music by <a href="https://www.bensound.com/">Bensound</a></footer>
+    </MusicPlayerProvider>
   );
 }
 
